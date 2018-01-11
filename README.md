@@ -18,7 +18,7 @@ Under `Build Settings` There will be a build rule latest and each version of the
 
 For example if we want to build version 0.11.4 and 0.11.5 of FastQC there would be two dockerfiles: `fastqc/0.11.4/Dockerfile` and `fastqc/0.11.5/Dockerfile`. 
 
-We would create three build rules on dockerhub for the `reddylab/fastqc` container:
+We would create two build rules on dockerhub for the `reddylab/fastqc` container:
 ```
 Type    Name   Dockerfile Location                      Docker Tag Name
 Branch  master /overrepresented_sequence_extract/1.0    latest
