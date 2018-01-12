@@ -3,7 +3,7 @@ MAINTAINER Alejandro Barrera <alejandro.barrera@duke.edu>
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
-  libgsl2 \
+  libgsl0ldbl \
   curl \
   gsl-bin
 
