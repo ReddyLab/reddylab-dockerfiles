@@ -3,9 +3,10 @@ MAINTAINER Alejandro Barrera <alejandro.barrera@duke.edu>
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
-  libgsl0ldbl \
+  libgsl2 \
   curl \
-  gsl-bin
+  gsl-bin \
+  lbzip2
 
 # Download pre-compiled preseq into /opt/
 ENV PRESEQ_RELEASE=2.0
