@@ -53,12 +53,12 @@ jobs:
       # Login against a Docker registry except on PR
       # https://github.com/docker/login-action
       
-      - name: Log into registry Docker hub
+     # - name: Log into registry Docker hub
         #if: github.event_name != 'pull_request'
-        uses: docker/login-action@28218f9b04b4f3f62068d7b6ce6ca5b26e35336c
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+       # uses: docker/login-action@28218f9b04b4f3f62068d7b6ce6ca5b26e35336c
+      #  with:
+       #   username: ${{ secrets.DOCKERHUB_USERNAME }}
+       #   password: ${{ secrets.DOCKERHUB_PASSWORD }}
           
       - name: Log in to the Container registry 
         uses: docker/login-action@28218f9b04b4f3f62068d7b6ce6ca5b26e35336c
@@ -75,7 +75,7 @@ jobs:
         with:
           images: 
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-            docker.io/reddylab/rsem
+            #docker.io/reddylab/rsem
           tags: latest
 
       # Build and push Docker image with Buildx (don't push on PR)
